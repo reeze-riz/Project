@@ -1,0 +1,92 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: pink;
+}
+
+.container {
+  margin-top: 100px;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.yes-btn {
+  background: rgb(45, 6, 238);
+  color: white;
+}
+
+.no-btn {
+  background: rgb(247, 7, 251);
+  color: white;
+}
+
+.result-container {
+  display: none;
+}
+
+.heart {
+  position: fixed;
+  font-size: 30px;
+  animation: floatUp 3s linear;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-600px);
+    opacity: 0;
+  }
+}
+
+.loading-container {
+  display: none;
+  margin-top: 100px;
+}
+
+/* Heart loader */
+.heart-loader {
+  width: 100px;
+  height: 90px;
+  position: relative;
+  margin: auto;
+  animation: heartbeat 1s infinite;
+}
+
+.heart-loader:before,
+.heart-loader:after {
+  content: "";
+  width: 50px;
+  height: 80px;
+  position: absolute;
+  left: 50px;
+  top: 0;
+  background: red;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.heart-loader:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
